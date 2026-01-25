@@ -1,0 +1,33 @@
+# --- Core & Manipulación de Datos ---
+numpy
+pandas
+scipy
+
+# --- Visualización ---
+matplotlib
+seaborn
+plotly          # Para gráficos interactivos 
+
+# --- Machine Learning (Clásico) ---
+scikit-learn
+statsmodels     # Para análisis estadístico puro y series temporales
+
+# --- Machine Learning (Boosting - Estándar en competencias/industria) ---
+xgboost
+lightgbm
+catboost        # Opcional, pero potente para variables categóricas
+
+# --- Conexión a Datos & Utilidades ---
+openpyxl        # Necesario para leer archivos .xlsx (Excel)
+sqlalchemy      # Para conectar con bases de datos SQL de forma agnóstica
+python-dotenv   # Para manejar credenciales (claves AWS/DB) sin quemarlas en código
+tqdm            # Barras de progreso para bucles largos (vital en entrenamientos)
+joblib          # Para guardar/cargar modelos (.pkl)
+
+# --- Entorno de Desarrollo (Solo si usas Jupyter localmente) ---
+jupyter
+jupyterlab
+ipykernel
+
+psycopg2-binary
+streamlit

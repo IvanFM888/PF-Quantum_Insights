@@ -28,3 +28,6 @@ joblib          # Para guardar/cargar modelos (.pkl)
 jupyter
 jupyterlab
 ipykernel
+
+psycopg2-binary
+streamlit

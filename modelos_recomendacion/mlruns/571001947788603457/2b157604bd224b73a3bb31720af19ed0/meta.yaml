@@ -1,0 +1,14 @@
+artifact_uri: file:///c:\Users\fredd\Desktop\Soy Henry\ProyectoFinal\PF-Quantum_Insights\modelos_recomendacion/mlruns/571001947788603457/2b157604bd224b73a3bb31720af19ed0/artifacts
+end_time: 1769455637282
+entry_point_name: ''
+experiment_id: '571001947788603457'
+lifecycle_stage: active
+run_id: 2b157604bd224b73a3bb31720af19ed0
+run_name: NLP_K5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1769455637213
+status: 3
+tags: []
+user_id: Fred

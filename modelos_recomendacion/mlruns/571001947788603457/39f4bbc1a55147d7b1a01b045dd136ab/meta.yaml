@@ -1,0 +1,14 @@
+artifact_uri: file:///c:\Users\fredd\Desktop\Soy Henry\ProyectoFinal\PF-Quantum_Insights\modelos_recomendacion/mlruns/571001947788603457/39f4bbc1a55147d7b1a01b045dd136ab/artifacts
+end_time: 1769457265001
+entry_point_name: ''
+experiment_id: '571001947788603457'
+lifecycle_stage: active
+run_id: 39f4bbc1a55147d7b1a01b045dd136ab
+run_name: CC_K3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1769457264936
+status: 3
+tags: []
+user_id: Fred

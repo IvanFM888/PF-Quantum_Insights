@@ -31,3 +31,7 @@ ipykernel
 
 psycopg2-binary
 streamlit
+
+
+# Para conectar a la base de datos
+python-dotenv

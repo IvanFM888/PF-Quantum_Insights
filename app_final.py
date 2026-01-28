@@ -1,10 +1,40 @@
+import os
 import streamlit as st
 import pandas as pd
 import pickle
-import random
 import numpy as np
+from sqlalchemy import create_engine
+from dotenv import load_dotenv
+
 np.random.seed(42)
 
+load_dotenv()
+
+def get_db_engine():
+    """Crea la conexión a la base de datos Supabase"""
+    user = os.getenv("DB_USER")
+    password = os.getenv("DB_PASSWORD")
+    host = os.getenv("DB_HOST")
+    port = os.getenv("DB_PORT")
+    dbname = os.getenv("DB_NAME")
+
+    # String de conexión para PostgreSQL
+    connection_str = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{dbname}"
+    
+    # Creamos el motor de conexión
+    engine = create_engine(connection_str)
+    return engine
+
+def cargar_datos_sql(query):
+    """Ejecuta una query y devuelve un DataFrame"""
+    engine = get_db_engine()
+    try:
+        # pandas lee directo desde SQL
+        df = pd.read_sql(query, engine)
+        return df
+    except Exception as e:
+        print(f"❌ Error al conectar con la BD: {e}")
+        return pd.DataFrame() # Retorna vacío si falla
 
 # ===============================
 # CONFIG
@@ -88,9 +118,18 @@ def cargar_modelos():
         modelo_nlp = pickle.load(f)
 
     return modelo_cc, modelo_nlp
-@st.cache_data
+@st.cache_data(ttl=600) # ttl=600 hace que recargue los datos cada 10 mins (opcional)
 def cargar_productos():
-    return pd.read_csv("databases/products.csv")
+    # CAMBIO CRÍTICO: En vez de leer CSV, leemos de SQL
+    query = "SELECT * FROM products" # <--- Asegúrate que la tabla se llame 'products' en Supabase
+    df = cargar_datos_sql(query)
+    
+    # Si por alguna razón falla la BD y devuelve vacío, podrías tener un fallback al CSV
+    if df.empty:
+        st.warning("⚠️ No se pudo conectar a la Nube. Usando datos locales de respaldo.")
+        return pd.read_csv("databases/products.csv")
+        
+    return df
 
 modelo_cc, modelo_nlp = cargar_modelos()
 df_products = cargar_productos()

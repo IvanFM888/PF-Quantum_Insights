@@ -1,4 +1,4 @@
-Unnamed: 0,product_id,rating,ProductName,Brand,Price,Image_Url,Category,SubCategory,perfil_texto
+unnamed: 0,product_id,rating,ProductName,Brand,price,image_url,Category,subcategory,perfil_texto
 0,P000001,4.08,Onion (Loose),Fresho,69.75,https://www.bigbasket.com/media/uploads/p/l/40075537_5-fresho-onion.jpg,Fruits & Vegetables,"Potato, Onion & Tomato","fresho fruits & vegetables potato, onion & tomato onion (loose)"
 1,P000002,3.87,Onion,Fresho,174.35,https://www.bigbasket.com/media/uploads/p/l/1201414_1-fresho-onion.jpg,Fruits & Vegetables,"Potato, Onion & Tomato","fresho fruits & vegetables potato, onion & tomato onion"
 2,P000003,3.46,"Farm Eggs - Table Tray, Medium, Antibiotic Residue-Free",Fresho,110.0,https://www.bigbasket.com/media/uploads/p/l/40072320_2-fresho-farm-eggs-table-tray-medium-antibiotic-residue-free.jpg,"Eggs, Meat & Fish",Farm Eggs,"fresho eggs, meat & fish farm eggs farm eggs - table tray, medium, antibiotic residue-free"
